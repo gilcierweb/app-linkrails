@@ -1,4 +1,4 @@
-# README
+# App LinkRails
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -22,3 +22,20 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+### Skills
+
+- Ruby
+- Ruby On Rails
+- Postgresql
+- Stimulus JS
+- Esbuild
+
+### Run app
+
+```shell
+cd app-linkrails
+
+./bin/dev
+#Run in http://localhost:3000 
+```
