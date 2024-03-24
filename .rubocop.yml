@@ -1,0 +1,22 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - .rubocop-performance.yml
+  - .rubocop-rails.yml  
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-capybara
+
+AllCops:
+  TargetRubyVersion: 3.3
+  Exclude:
+    - 'coverage/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'spec/rails_helper.rb'
