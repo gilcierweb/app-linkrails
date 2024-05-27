@@ -1,0 +1,22 @@
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+       <img class="rounded mx-auto d-block rounded-circle" src="https://via.assets.so/game.png?id=1&q=95&w=360&h=360&fit=fill" alt="">
+      <h1 class="fw-light">App LinkRails details</h1>
+      <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          The current link item
+        </a>
+        <% 10.times do |index|%>
+        <%= link_to "A link item #{index}", root_path, class: 'list-group-item list-group-item-action' %>
+        <% end%>
+      </div>
+    </div>
+  </div>
+</section>
+

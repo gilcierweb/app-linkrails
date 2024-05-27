@@ -1,13 +1,19 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary shadow">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">App LinkRails</a>
+    <%= link_to 'App LinkRails', root_path, class: 'navbar-brand' %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item rounded">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <%= link_to 'Home', root_path, class: 'nav-link active', 'aria-current': 'page' %>
+        </li>
+        <li class="nav-item rounded">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item rounded">
+          <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item rounded">
           <a class="nav-link" href="#">Link</a>
@@ -22,13 +28,19 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>      
+        </li>
       </ul>
       <div class="d-flex">
-    <button class="btn btn-light me-3">Log In</button>
-        <button class="btn btn-dark">Sign Up Free</button>
+    
+         <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, :class => 'btn btn-light me-3'  %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-dark'  %>
+        <% end %>
       </div>
-      
     </div>
   </div>
 </nav>
