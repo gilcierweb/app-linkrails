@@ -2,11 +2,11 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">App LinkRails example</h1>
-        <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <h1 class="fw-light">App Link Rails</h1>
+        <p class="lead text-body-secondary">Simple clone Linktree with Ruby on Rails and Stimulusjs.</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <%= link_to 'Entrar', new_user_session_path, class: 'btn btn-primary btn-lg px-4 gap-3' %>
+          <%= link_to 'Cadastrar-se', new_user_registration_path, class: 'btn btn-outline-secondary btn-lg px-4' %>
         </p>
       </div>
     </div>

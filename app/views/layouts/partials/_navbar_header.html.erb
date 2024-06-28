@@ -18,20 +18,25 @@
         <li class="nav-item rounded">
           <a class="nav-link" href="#">Link</a>
         </li>
+
         <li class="nav-item dropdown rounded">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Admin
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'Edit profile', edit_user_registration_path, class: 'dropdown-item' %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'dropdown-item', data: { turbo_method: :delete } %></li>
+            <% else %>
+              <li><%= link_to 'Sign up', new_user_registration_path, class: 'dropdown-item' %></li>
+              <li><%= link_to 'Login', new_user_session_path, class: 'dropdown-item' %></li>
+            <% end %>
           </ul>
         </li>
       </ul>
+
       <div class="d-flex">
-    
+
          <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |

@@ -30,7 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
-  project: "App Umanni"
+  project: "App Link Rails"
   show: 'Visualizar'
   new: 'Novo'
   edit: 'Editar'
