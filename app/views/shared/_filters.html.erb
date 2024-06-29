@@ -1,0 +1,9 @@
+<%= form_with(url: url_path, class: "filters-container", method: :get,
+              data: { controller: "filters", filters_target: "form", turbo_frame: turbo_frame_name.blank? ? "table": turbo_frame_name  }) do |form| %>
+  <div class="filters-group input-group">
+    <%= form.text_field :search, { placeholder: t('search-placeholder'), class: "form-control form-select-lg", value: params[:search], data: { action: "filters#submit" } } %>
+    <span class="input-group-text">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </span>
+  </div>
+<% end %>
